@@ -6,9 +6,20 @@ nav {
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
     padding: 0.75rem 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* pushes logo left */
+}
+
+.nav-logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin-left:1rem;
 }
 
 a.nav-link {
@@ -16,20 +27,25 @@ a.nav-link {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
+    margin: 0 0.75rem;
 }
 
 a.nav-link:hover {
     color: #d9c9a5;
 }
+/* END NAVBAR */
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-}
-
-.nav-logo img {
-    width: 90px;
+/* START GE */
+.heroImg {
+    width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: 0.75rem;
+    max-height: 500px;
+    overflow: hidden;
 }
+
+.heroImg img {
+    display: block;
+    position: relative;
+    top: -50px; /* cuts 50px off the top */
+}
+/* END GE */
