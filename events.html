@@ -28,8 +28,8 @@
 
     <div class="store-sign">
         <div class="sign" id="sign">
-            <div class="front">OPEN</div>
-            <div class="back">CLOSED</div>
+            <div class="front text-center">Farm Store Is OPEN</div>
+            <div class="back">Farm Store Is CLOSED</div>
         </div>
     </div>
 </nav>
@@ -43,6 +43,25 @@
 
         <!-- END HERO -->
 
+
+
+        <div class="card filter-panel p-4 mb-5 shadow-sm">
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-3">
+                    <input type="text" id="playerSearch" class="form-control" placeholder="Search event...">
+                </div>
+
+                <div class="col-md-2">
+                    <select id="posFilter" class="form-select">
+                    <option value="All">All Events</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Fall">Fall</option>
+                    <option value="Winter">Winter</option>
+                </select>
+            </div>
+        </div>
+        </div>
 
         <div id="rosterList" class="row g-4 align-items-stretch"></div>
     </div>

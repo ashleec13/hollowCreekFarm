@@ -22,6 +22,10 @@ setInterval(updateStoreSign, 60000)
 
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    // Variables for HTML elements
+    const grid = document.getElementById("rosterList");
+    const searchInput = document.getElementById("playerSearch");
+    const posFilter = document.getElementById("posFilter");
 
 

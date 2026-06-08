@@ -64,7 +64,7 @@ const events = [
         season: "winter",
         date: "First three weekends of December",
         description: "Shop artisan goods, farm gifts, wreaths, and more."
-    }
+    },
         {
         eventName: "Christmas Trees",
         season: "winter",
