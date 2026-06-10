@@ -3,19 +3,23 @@ const events = [
         eventName: "Sunflower U-Pick",
         season: "spring",
         date: "Mid-May through late July",
-        description: "Walk the rows and cut your own bouquet."
+        description: "Walk the rows and cut your own bouquet.",
+        image: "Client Files/Events/event-sunflower-upick-family-sunset.png"
+
     },
     {
         eventName: "Strawberry Picking",
         season: "spring",
         date: "April through June (weekends)",
-        description: "Pick fresh strawberries during U-Pick weekends."
+        description: "Pick fresh strawberries during U-Pick weekends.",
+        image: "Client Files/Events/event-strawberry-upick-child-basket.png"
     },
     {
         eventName: "Blueberry Picking",
         season: "summer",
         date: "July through early August",
-        description: "Visit the berry fields and pick fresh blueberries."
+        description: "Visit the berry fields and pick fresh blueberries.",
+        image:
     },
     {
         eventName: "Baby Animal Visits",
