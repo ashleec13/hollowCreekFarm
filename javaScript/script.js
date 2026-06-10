@@ -1,6 +1,7 @@
 const sign = document.getElementById("sign");
 
 function updateStoreSign() {
+    if (!sign) return;
     const now = new Date();
     const hour = now.getHours();
 
@@ -13,10 +14,12 @@ function updateStoreSign() {
     }
 }
 
-updateStoreSign();
+if (sign) {
+    updateStoreSign();
 
-// Check every minute
-setInterval(updateStoreSign, 60000)
+    // Check every minute
+    setInterval(updateStoreSign, 60000)
+}
 
 
 
@@ -46,18 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
         list.forEach(function (event) {
             const col = document.createElement("div");
             col.className = "col-sm-6 col-md-4 col-lg-3";
+            let cardHTML = `<div class="card h-100 shadow-sm border-uf-orange">`;
 
-            col.innerHTML = `
-                <div class="card h-100 shadow-sm border-uf-orange">
-                    <div class="card-body text-center">
+            if (event.image) {
+                cardHTML += `<img src="${event.image}" class="card-img-top" alt="${event.eventName}">`;
+            }
+
+            cardHTML += ` <div class="card-body text-center">
                         <h5 class="card-title uf-blue-text">${event.eventName}</h5>
                         <p class="card-text mb-1"><strong>Season:</strong> ${event.season}</p>
                         <p class="text-muted small">${event.date}</p>
                         <p class="mt-2">${event.description}</p>
-                    </div>
-                </div>
-            `;
+                    </div></div>`;
 
+            col.innerHTML = cardHTML;
             grid.appendChild(col);
         });
     }
