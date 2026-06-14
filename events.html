@@ -16,67 +16,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css" />
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="https://use.typekit.net/rfs2tot.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qlw2eqh.css">
+>>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
     <link rel="icon" href="data:," />
 </head>
 
 <body>
 
-<header>
-    <nav class="nav justify-content-center position-relative">
-        <a class="nav-logo" href="index.html">
-            <img src="client Files/Logos/mainLogoSemiColored.png" alt="Hollow Creek Logo">
-        </a>
+    <header>
+        <nav class="nav justify-content-center position-relative">
+            <a class="nav-logo" href="index.html">
+                <img src="client Files/Logos/mainLogoSemiColored.png" alt="Hollow Creek Logo">
+            </a>
 
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About Us</a>
-        <a class="nav-link" href="shop.html">Shop</a>
-    </nav>
-</header>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="shop.html">Shop</a>
+        </nav>
+    </header>
 
-<main>
+    <main>
 
-    <!-- HERO -->
-    <img class="heroImg"
-         src="Client Files/Hero Imgs/hero-barn-creek-sunflowers-sunrise.png"
-         alt="Hollow Creek Farm hero image">
+        <!-- HERO -->
+        <img class="heroImg" src="Client Files/Hero Imgs/hero-barn-creek-sunflowers-sunrise.png"
+            alt="Hollow Creek Farm hero image">
 
-    <!-- FILTER PANEL -->
-    <div class="container my-4">
+        <!-- FILTER PANEL -->
+        <div class="container my-4">
 
-        <div class="card filter-panel p-4 mb-4 shadow-sm">
-            <div class="row g-3 justify-content-center">
+            <div class="card filter-panel p-4 mb-4 shadow-sm">
+                <div class="row g-3 justify-content-center">
 
-                <!-- Search -->
-                <div class="col-md-4">
-                    <input type="text"
-                           id="eventSearch"
-                           class="form-control"
-                           placeholder="Search events...">
+                    <!-- Search -->
+                    <div class="col-md-4">
+                        <input type="text" id="eventSearch" class="form-control" placeholder="Search events...">
+                    </div>
+
+                    <!-- Season Filter -->
+                    <div class="col-md-3">
+                        <select id="seasonFilter" class="form-select">
+                            <option value="All">All Seasons</option>
+                            <option value="spring">Spring</option>
+                            <option value="summer">Summer</option>
+                            <option value="fall">Fall</option>
+                            <option value="winter">Winter</option>
+                        </select>
+                    </div>
+
                 </div>
-
-                <!-- Season Filter -->
-                <div class="col-md-3">
-                    <select id="seasonFilter" class="form-select">
-                        <option value="All">All Seasons</option>
-                        <option value="spring">Spring</option>
-                        <option value="summer">Summer</option>
-                        <option value="fall">Fall</option>
-                        <option value="winter">Winter</option>
-                    </select>
-                </div>
-
             </div>
+
+            <!-- EVENT GRID -->
+            <div id="eventList" class="row g-4 align-items-stretch"></div>
+
         </div>
 
-        <!-- EVENT GRID -->
-        <div id="eventList" class="row g-4 align-items-stretch"></div>
+    </main>
 
-    </div>
+    <footer></footer>
 
-</main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer></footer>
+    <!-- Your data file (MUST load first) -->
+    <script src="javaScript/eventList.js"></script>
 
+<<<<<<< HEAD
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -85,6 +93,11 @@
 
 <!-- Main JS -->
 <script src="javaScript/script.js"></script>
+=======
+    <!-- Main JS -->
+    <script src="javaScript/script.js"></script>
+>>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
 
 </body>
+
 </html>
