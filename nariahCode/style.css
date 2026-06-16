@@ -1,5 +1,5 @@
 body {
-     background-image: url("Client Files/lightwood.png");
+     background-image: url("../Client Files/lightwood.png");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -382,7 +382,7 @@ a.nav-link:hover {
 }
 .hero {
     height: 70vh;
-    background-image: url("Client Files/Hero Imgs/hero-farm-store-exterior-summer.png");
+    background-image: url("../Client Files/Hero Imgs/hero-farm-store-exterior-summer.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
