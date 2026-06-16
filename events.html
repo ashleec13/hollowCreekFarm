@@ -1,59 +1,65 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
-
 <head>
-    <title>HOLLOW CREEK FARMS</title>
-
+    <title>Hollow Creek Farms - Events</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Google Fonts: Playfair Display & Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/rfs2tot.css">
-    <link rel="stylesheet" href="https://use.typekit.net/qlw2eqh.css">
     <link rel="icon" href="data:," />
 </head>
-
 <body>
 
     <header>
-        <nav class="nav justify-content-center position-relative">
-            <a class="nav-logo" href="index.html">
-                <img src="client Files/Logos/mainLogoSemiColored.png" alt="Hollow Creek Logo">
-            </a>
+        <nav class="navbar navbar-expand-lg fixed-top shadow">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="client Files/Logos/mainLogoSemiColored.png" alt="Hollow Creek Logo" class="nav-logo-img">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="about.html">About Us</a>
-            <a class="nav-link" href="shop.html">Shop</a>
+                <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="events.html">Events & Activities</a></li>
+                    </ul>
+                </div>
+
+                <div class="store-sign-wrapper d-none d-lg-block">
+                    <div class="store-sign">
+                        <div class="sign" id="sign">
+                            <div class="front text-center">Farm Is OPEN</div>
+                            <div class="back text-center">Farm Is CLOSED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main style="margin-top: 120px;">
+        <div class="container">
+            
+            <div class="text-center mb-5">
+                <h1 class="display-4 text-uppercase fw-bold">Upcoming Farm Events</h1>
+                <hr class="mx-auto style-divider">
+                <p class="lead text-muted">Use the filters below to discover seasonal festivals and activities.</p>
+            </div>
 
-        <!-- HERO -->
-        <img class="heroImg" src="Client Files/Hero Imgs/hero-barn-creek-sunflowers-sunrise.png"
-            alt="Hollow Creek Farm hero image">
-
-        <!-- FILTER PANEL -->
-        <div class="container my-4">
-
-            <div class="card filter-panel p-4 mb-4 shadow-sm">
+            <div class="card filter-panel p-4 mb-5 shadow-sm">
                 <div class="row g-3 justify-content-center">
-
-                    <!-- Search -->
-                    <div class="col-md-4">
-                        <input type="text" id="eventSearch" class="form-control" placeholder="Search events...">
+                    
+                    <div class="col-md-5">
+                        <label for="eventSearch" class="form-label fw-bold">Search Keywords</label>
+                        <input type="text" id="eventSearch" class="form-control" placeholder="Type an event name...">
                     </div>
 
-                    <!-- Season Filter -->
-                    <div class="col-md-3">
+                    <div class="col-md-4">
+                        <label for="seasonFilter" class="form-label fw-bold">Filter By Season</label>
                         <select id="seasonFilter" class="form-select">
                             <option value="All">All Seasons</option>
                             <option value="spring">Spring</option>
@@ -66,35 +72,21 @@
                 </div>
             </div>
 
-            <!-- EVENT GRID -->
-            <div id="eventList" class="row g-4 align-items-stretch"></div>
+            <div id="eventList" class="row g-4 justify-content-center mb-5"></div>
 
         </div>
-
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container text-center py-4">
+            <p class="m-0 text-white-50 small">&copy; 2026 Hollow Creek Farm. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Your data file (MUST load first) -->
+    
     <script src="javaScript/eventList.js"></script>
-
-<<<<<<< HEAD
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Event Data -->
-<script src="javaScript/eventList.js"></script>
-
-<!-- Main JS -->
-<script src="javaScript/script.js"></script>
-=======
-    <!-- Main JS -->
     <script src="javaScript/script.js"></script>
->>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
 
 </body>
-
 </html>

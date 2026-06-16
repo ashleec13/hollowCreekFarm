@@ -1,6 +1,8 @@
-/* ========================================
-   HOLLOW CREEK FARM - EVENT DATA
-======================================== */
+/* ========================================================================
+   HOLLOW CREEK FARM - EVENT DATA ARRAY
+   This array of objects stores all event information. Separating data 
+   from the main logic file makes the site easier to manage.
+   ======================================================================== */
 
 const events = [
     {
@@ -57,33 +59,21 @@ const events = [
         season: "fall",
         date: "September through November",
         description: "Watch fresh cider being made and take a jug home.",
-<<<<<<< HEAD
         image: "Client Files/Events/event-apple-cider-pressing-family.png"
-=======
-        image:"Client Files/Events/event-apple-cider-pressing-family.png"
->>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
     },
     {
         eventName: "Fall Harvest Festival",
         season: "fall",
         date: "Last two weekends of October",
         description: "Food vendors, live music, crafts, and farm fun.",
-<<<<<<< HEAD
         image: "Client Files/Events/event-fall-harvest-festival-crowds.png"
-=======
-        image:"Client Files/Events/event-fall-harvest-festival-crowds.png"
->>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
     },
     {
         eventName: "Farm-to-Table Dinner",
         season: "summer",
         date: "Select Saturday evenings",
         description: "Ticketed dinner experience in the covered pavilion.",
-<<<<<<< HEAD
         image: "Client Files/Events/event-farm-to-table-dinner-string-lights.png"
-=======
-        image:"Client Files/Events/event-farm-to-table-dinner-string-lights.png"
->>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
     },
     {
         eventName: "Holiday Market",
@@ -96,11 +86,7 @@ const events = [
         eventName: "Christmas Trees",
         season: "winter",
         date: "First three weekends of December",
-<<<<<<< HEAD
         description: "Choose-and-cut Christmas trees for the holiday season.",
-=======
-        description: "Artisan goods, farm gifts, wreaths, and more.",
->>>>>>> 50694b87db4f42a797a318d120f57a6f21c1ee02
         image: "Client Files/Events/event-christmas-tree-farm-choose-cut.png"
     }
 ];
