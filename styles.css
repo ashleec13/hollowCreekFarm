@@ -1,60 +1,76 @@
 /* ========================================
-   CSS VARIABLES (BRAND KIT SPECIFICATIONS)
-   Using variables means if we want to change a color, 
-   we only have to change it here!
+   CSS VARIABLES
 ======================================== */
 :root {
-    --color-forest:     #2C5F2E;   /* Dark green for headers and nav */
-    --color-gold:       #D4A017;   /* Warm gold for accents */
-    --color-barn-red:   #8B2500;   /* Deep red for the closed sign / accents */
-    --color-cream:      #FAF3E0;   /* Light off-white for backgrounds */
-    --color-parchment:  #EDE0C4;   /* Tan color for filter panels */
-    --color-earth:      #4A3728;   /* Dark brown for body text (better contrast than grey) */
-    --color-meadow:     #5A7A3A;   /* Lighter green for hover states */
+    --color-forest: #2E4928;
+    --color-gold: #8A8433;
+    --color-barn-red: #8C2F27;
+    --color-cream: #F7F3EA;
+    --color-parchment: #E5D3AA;
+    --color-earth: #4A3728;
+    --color-meadow: #5A7A3A;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body:    'Lato', sans-serif;
+    --font-display: "farmhand", serif;
+    --font-body: "new-farm", sans-serif;
 }
 
 /* ========================================
    GLOBAL HTML/BODY STYLING
 ======================================== */
-html, body {
+html,
+body {
     font-family: var(--font-body);
     color: var(--color-earth);
-    background-color: #ffffff;
-    /* Flex column setup forces the footer to the bottom of the page */
+    background: #FCEBCD;
+    background-size: cover;
+    background-attachment: fixed;
+
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
-/* Apply Display font strictly to headings */
-h1, h2, h3, h4, h5, h6 {
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 400;
     color: var(--color-forest);
+}
+
+h1::before,
+h1::after {
+    color: var(--color-gold);
+    margin: 0 20px;
+    font-size: 1.5rem;
 }
 
 .bg-cream {
     background-color: var(--color-cream);
 }
 
-/* Custom decorative underline for headings */
+/* Decorative Divider */
 .style-divider {
+    display: block;
     width: 80px;
     height: 4px;
+    margin: 1.5rem auto;
     background-color: var(--color-gold);
     border: none;
     opacity: 1;
+    border-radius: 999px;
 }
 
 /* ========================================
    NAVIGATION MENU
 ======================================== */
 nav.navbar {
-    background-color: var(--color-forest) !important;
-    border-bottom: 3px solid var(--color-gold);
+    background-color: var(--color-barn-red) !important;
+    border-bottom: 4px solid var(--color-gold);
 }
 
 .nav-logo-img {
@@ -62,19 +78,17 @@ nav.navbar {
     height: auto;
 }
 
-/* Style the text links inside the navbar */
 nav .nav-link {
     color: var(--color-cream) !important;
-    font-weight: 700;
+    font-family: var(--font-body);
     font-size: 1.1rem;
     margin: 0 1rem;
     transition: color 0.3s ease;
 }
 
-/* Change link color to gold on hover and on the active page */
-nav .nav-link:hover, 
+nav .nav-link:hover,
 nav .nav-link.active {
-    color: var(--color-gold) !important;
+    color: #d9c9a5 !important;
 }
 
 /* ========================================
@@ -82,28 +96,56 @@ nav .nav-link.active {
 ======================================== */
 .carousel-hero-img {
     height: 500px;
-    object-fit: cover; /* Prevents stretching */
-    filter: brightness(80%); /* Darkens image slightly so white text is readable */
+    object-fit: cover;
+    filter: brightness(80%);
 }
 
 .carousel-caption {
-    background-color: rgba(74, 55, 40, 0.8); /* Earth color, 80% opacity */
+    background-color: rgba(74, 55, 40, 0.8);
     border-left: 4px solid var(--color-gold);
+    border-radius: 0 10px 10px 0;
 }
 
-/* Fixed height for event cards so they stay aligned in a grid */
 .card-fixed-img {
     height: 200px;
     object-fit: cover;
 }
 
+.farm-about-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+
+    border: 4px solid var(--color-barn-red);
+    border-radius: 12px;
+}
+
+.farm-divider,
+.style-divider {
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.farm-divider {
+    width: min(90%, 720px);
+    height: 4px;
+    background-color: var(--color-barn-red);
+    border-radius: 999px;
+}
+
 /* ========================================
-   FILTER PANEL & INPUTS
+   FILTER PANEL
 ======================================== */
 .filter-panel {
     background-color: var(--color-parchment) !important;
-    border: 2px solid var(--color-gold) !important;
-    border-radius: 12px;
+    border: 4px solid var(--color-barn-red) !important;
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, .08),
+        0 8px 20px rgba(0, 0, 0, .12);
 }
 
 .filter-panel .form-control,
@@ -111,7 +153,6 @@ nav .nav-link.active {
     border: 2px solid var(--color-forest);
 }
 
-/* Highlight inputs in barn red when the user clicks inside them */
 .filter-panel .form-control:focus,
 .filter-panel .form-select:focus {
     border-color: var(--color-barn-red);
@@ -122,30 +163,45 @@ nav .nav-link.active {
    EVENT CARDS
 ======================================== */
 .card {
-    border: 2px solid var(--color-parchment);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--color-parchment);
+    border: 4px solid var(--color-barn-red);
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,.08),
+        0 10px 20px rgba(0,0,0,.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Makes the card float up slightly when hovered over */
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15) !important;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,0,0,.08),
+        0 15px 30px rgba(0,0,0,.18);
+
     border-color: var(--color-gold);
 }
 
-/* Custom button styles */
+/* ========================================
+   BUTTONS
+======================================== */
 .btn-primary {
+    background-color: var(--color-barn-red) !important;
+    border-color: var(--color-barn-red) !important;
+    font-family: var(--font-body);
+}
+
+.btn-primary:hover {
     background-color: var(--color-forest) !important;
     border-color: var(--color-forest) !important;
 }
 
-.btn-primary:hover {
-    background-color: var(--color-meadow) !important;
-    border-color: var(--color-meadow) !important;
-}
-
 /* ========================================
-   3D SUSPENDED STORE SIGN ANIMATION
+   3D STORE SIGN
 ======================================== */
 .store-sign-wrapper {
     position: relative;
@@ -157,13 +213,13 @@ nav .nav-link.active {
     position: absolute;
     top: -15px;
     right: 0;
-    perspective: 1000px; /* Gives the 3D depth effect */
+    perspective: 1000px;
     transform-origin: top center;
-    animation: signSwing 3s ease-in-out infinite alternate; /* Continuous swinging */
+    animation: signSwing 3s ease-in-out infinite alternate;
 }
 
-/* Creating the two "strings" holding the sign */
-.store-sign::before, .store-sign::after {
+.store-sign::before,
+.store-sign::after {
     content: "";
     position: absolute;
     top: -10px;
@@ -171,37 +227,45 @@ nav .nav-link.active {
     height: 15px;
     background-color: var(--color-gold);
 }
-.store-sign::before { left: 20px; }
-.store-sign::after { right: 20px; }
 
-/* The container that actually flips */
+.store-sign::before {
+    left: 20px;
+}
+
+.store-sign::after {
+    right: 20px;
+}
+
 .sign {
     width: 150px;
     height: 45px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s ease; /* Smooth flipping speed */
+    transition: transform 0.8s ease;
 }
 
-/* A class added by JavaScript to trigger the rotation */
 .sign.flipped {
     transform: rotateY(180deg);
 }
 
-/* Shared styles for both sides of the sign */
-.front, .back {
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hides the backside of the div when flipped */
+
+    backface-visibility: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.9rem;
+    font-weight: 400;
+    font-size: 0.95rem;
+
     border: 2px solid var(--color-gold);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .front {
@@ -212,13 +276,24 @@ nav .nav-link.active {
 .back {
     background-color: var(--color-barn-red);
     color: var(--color-cream);
-    transform: rotateY(180deg); /* Pre-flips the back side so it rests correctly */
+    transform: rotateY(180deg);
 }
 
-/* Keyframes controlling the swinging physics */
 @keyframes signSwing {
-    0% { transform: rotateX(-5deg); }
-    100% { transform: rotateX(5deg); }
+    0% {
+        transform: rotateX(-5deg);
+    }
+
+    100% {
+        transform: rotateX(5deg);
+    }
 }
 
-footer { background-color: var(--color-earth); }
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+    background-color: var(--color-parchment);
+    border-top: 4px solid var(--color-barn-red);
+    color: var(--color-forest);
+}

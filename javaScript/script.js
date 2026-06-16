@@ -85,7 +85,7 @@ function initEventGallery() {
             // We inject object data using ${variable} syntax
             col.innerHTML = `
                 <div class="card w-100 shadow-sm">
-                    <img src="${eventObj.image}" class="card-img-top card-fixed-img" alt="${eventObj.eventName}">
+                    <img src="${eventObj.image}" class="card-img-top card-fixed-img" alt="${eventObj.altText}">
                     
                     <div class="card-body d-flex flex-column">
                         <span class="badge bg-secondary mb-2 align-self-start text-uppercase">${eventObj.season}</span>
